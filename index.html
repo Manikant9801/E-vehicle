@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Vehicle Project</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #eafaf1; /* Light green background */
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background-color: #2d6a4f; /* Eco-friendly dark green */
+        }
+
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #95d5b2 !important; /* Light eco-green hover */
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('ev-banner.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        .btn-primary {
+            background-color: #52b788; /* Eco-friendly green */
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .btn-primary:hover {
+            background-color: #40916c;
+        }
+
+        .features-section, .section {
+            padding: 60px 0;
+        }
+
+        .features-section .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .features-section h4 {
+            font-weight: 500;
+            margin-top: 15px;
+        }
+
+        .cta-section {
+            background-color: #40916c;
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .footer {
+            background-color: #2d6a4f;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .contact-form {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form .form-control {
+            border: 2px solid #52b788;
+        }
+
+        .contact-form .form-control:focus {
+            box-shadow: none;
+            border-color: #95d5b2;
+        }
+
+        .btn-submit {
+            background-color: #52b788;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        .btn-submit:hover {
+            background-color: #40916c;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">E-Vehicle</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#vehicles">Vehicles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#charging">Charging Stations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#eco-benefits">Eco Benefits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#login" data-toggle="modal" data-target="#loginModal">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#signup" data-toggle="modal" data-target="#signupModal">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+<section id="home" class="hero-section" style="background-image: url('bgi.png'); background-size: cover; background-position: center;">
+    <div class="hero-text">
+        <h1>Drive the Future</h1>
+        <p>Explore the latest electric vehicles and embrace sustainability</p>
+        <a href="#vehicles" class="btn btn-primary btn-lg">Explore Now</a>
+    </div>
+</section>
+
+
+ <!-- Vehicles Section -->
+<section id="vehicles" class="features-section container">
+    <div class="text-center mb-5">
+        <h2>Our Electric Vehicles</h2>
+        <p>High performance and eco-friendly solutions for a sustainable future</p>
+    </div>
+    <div class="row">
+        <!-- Electric Cars -->
+        <div class="col-md-4 text-center">
+            <div class="feature-box p-4">
+                <img src="car.jpg" alt="Electric Cars" class="img-fluid mb-3" style="max-height: 200px;">
+                <h4>Electric Cars</h4>
+                <p>State-of-the-art electric cars with zero emissions and top-notch performance.</p>
+            </div>
+        </div>
+        <!-- Electric Bikes -->
+        <div class="col-md-4 text-center">
+            <div class="feature-box p-4">
+                <img src="bike.webp" alt="Electric Bikes" class="img-fluid mb-3" style="max-height: 200px;">
+                <h4>Electric Bikes</h4>
+                <p>Efficient and fast electric bikes for urban commuting and eco-friendly rides.</p>
+            </div>
+        </div>
+        <!-- Electric Scooters -->
+        <div class="col-md-4 text-center">
+            <div class="feature-box p-4">
+                <img src="scooter.webp" alt="Electric Scooters" class="img-fluid mb-3" style="max-height: 200px;">
+                <h4>Electric Scooters</h4>
+                <p>Eco-friendly electric scooters designed for short commutes in the city.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+ <!-- Charging Stations Section -->
+<section id="charging" class="cta-section">
+    <div class="container">
+        <h2>Find Charging Stations</h2>
+        <p>Locate fast and slow charging stations near you to power your electric vehicle efficiently.</p>
+        <!-- Charging Station Image -->
+        <div class="text-center">
+            <img src="charge.webp" alt="Charging Station" class="img-fluid mb-4" style="max-height: 200px; max-width: 1000px; border-radius: 10px;">
+        </div>
+        <a href="#contact" class="btn btn-outline-light">Find Stations</a>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="contact-form">
+                        <form action="contact_submit.php" method="post">
+                            <div class="form-group">
+                                <label for="email_or_phone">Email or Phone Number</label>
+                                <input type="text" class="form-control" id="email_or_phone" name="email_or_phone" placeholder="Your email or phone number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-submit btn-block">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="login.php" method="POST">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" class="form-control" id="loginEmail" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-group">
+                        <small><a href="#" data-toggle="modal" data-target="#forgotPasswordModal">Forgot password?</a></small>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Signup Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="signup.php" method="POST">
+                    <div class="form-group">
+                        <label for="signupEmail">Email</label>
+                        <input type="email" class="form-control" id="signupEmail" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" class="form-control" id="signupPassword" name="password" placeholder="Create a password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirm_password" placeholder="Confirm your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Forgot Password Modal -->
+<div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="forgotPasswordModalLabel">Forgot Password</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="forgot_password.php" method="POST">
+                    <div class="form-group">
+                        <label for="forgotEmail">Email</label>
+                        <input type="email" class="form-control" id="forgotEmail" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Reset Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; 2024 E-Vehicle Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
